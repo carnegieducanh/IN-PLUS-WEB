@@ -1,0 +1,131 @@
+/* Media queries and responsive design */
+
+/* Mobile first - 640px and below */
+@media (max-width: 640px) {
+  .section {
+    padding: 0.75rem;
+  }
+
+  .overlay {
+    padding-top: 6rem;
+  }
+
+  .animate-on-scroll {
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .nav-dots {
+    right: 12px;
+    gap: 14px;
+  }
+
+  .nav-line {
+    width: 1px;
+    right: 1.5px;
+  }
+
+  .nav-active-indicator {
+    right: -1.5px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .nav-active-ghost {
+    width: 4px;
+    height: 4px;
+  }
+
+  .nav-dots li {
+    width: 4px;
+    height: 4px;
+  }
+
+  .nav-dots li:hover {
+    transform: scale(1.2);
+  }
+
+  .nav-dots li span {
+    right: 15px;
+    font-size: 11px;
+  }
+
+  .video-container {
+    top: 76px;
+    height: calc(100vh - 76px);
+  }
+}
+
+/* Small mobile - 480px and below */
+@media (max-width: 480px) {
+  .nav-dots li span {
+    display: none;
+  }
+
+  .nav-dots li:hover span {
+    display: none;
+  }
+
+  .nav-dots li.active span {
+    display: none;
+  }
+}
+
+/* Very small screens - 360px and below */
+@media (max-width: 360px) {
+  .section {
+    padding: 0.5rem;
+  }
+
+  .overlay {
+    padding-top: 4rem;
+  }
+}
+
+/* Tablet and up - 640px and above */
+@media (min-width: 640px) {
+  .nav-dots {
+    right: 20px;
+    gap: 18px;
+  }
+}
+
+/* Desktop and up - 768px and above */
+@media (min-width: 768px) {
+  .overlay {
+    padding-top: 2.5rem;
+  }
+
+  .nav-dots {
+    right: 25px;
+    gap: 20px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Large desktop - 1440px and above */
+@media (min-width: 1440px) {
+  .section {
+    padding: 2rem 4rem;
+  }
+
+  .overlay {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Extra large desktop - 1920px and above */
+@media (min-width: 1920px) {
+  .section {
+    padding: 2rem 8rem;
+  }
+
+  .overlay {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}

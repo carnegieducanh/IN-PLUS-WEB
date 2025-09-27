@@ -1,0 +1,135 @@
+/* Navigation dots styling and animations */
+.nav-dots {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  z-index: 50;
+}
+
+.nav-line {
+  position: absolute;
+  width: 1px;
+  background: rgba(50, 50, 50, 0.3);
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  z-index: -1;
+}
+
+.nav-active-indicator {
+  position: absolute;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  transform: translateY(0);
+  transition: top 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: top;
+  transform: translateZ(0);
+}
+
+.nav-active-ghost {
+  position: absolute;
+  right: 0px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(70, 70, 70, 0.8);
+  transition: top 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  will-change: top;
+  transform: translateZ(0);
+}
+
+.nav-dots li {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(80, 80, 80, 0.6);
+  cursor: pointer;
+  transition: all 1.3s ease;
+  will-change: transform, background-color;
+  transform: translateZ(0);
+}
+
+.nav-dots li:hover {
+  transform: scale(1.4);
+  background: #333;
+}
+
+.nav-dots li.active {
+  background: rgba(50, 50, 50, 0.8);
+}
+
+.nav-dots li span {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(60, 60, 60, 0.7);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 1.3s ease;
+}
+
+.nav-dots li:hover span {
+  opacity: 1;
+  color: #333;
+  transform: translateY(-50%) translateX(-5px);
+}
+
+.nav-dots li.active span {
+  opacity: 1;
+  color: #333;
+  font-weight: 500;
+}
+
+/* White variants for specific sections (メッセージ and アクセス) */
+.nav-dots-white .nav-line {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-active-indicator-white {
+  background: #fff !important;
+}
+
+.nav-dots-white .nav-active-ghost {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-dots-white li {
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.nav-dots-white li:hover {
+  background: #fff !important;
+}
+
+.nav-dots-white li.active {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-dots-white li span {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.nav-dots-white li:hover span {
+  color: #fff !important;
+}
+
+.nav-dots-white li.active span {
+  color: #fff !important;
+}
+
+.nav-dots-white li.active-white span {
+  color: #fff !important;
+  font-weight: 500;
+}

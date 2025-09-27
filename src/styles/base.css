@@ -1,0 +1,42 @@
+/* Base styles and global configurations */
+body {
+  font-family:
+    arial,
+    helvetica,
+    Noto Serif JP,
+    游明朝,
+    "Yu Mincho",
+    YuMincho,
+    "Hiragino Mincho ProN",
+    HGS明朝E,
+    メイリオ,
+    Meiryo,
+    serif;
+  overflow: hidden;
+  padding-top: 0;
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+
+/* Disable default scrolling for fullpage effect */
+html,
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Additional smoothness for transitions */
+* {
+  box-sizing: border-box;
+}
