@@ -1,3 +1,21 @@
+/* Hamburger menu animation styles */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 1px;
+  transform-origin: center;
+}
+
 /* Navigation dots styling and animations */
 .nav-dots {
   position: fixed;

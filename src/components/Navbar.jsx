@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import "../styles/navigation.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,22 +11,22 @@ const Navbar = () => {
   // Function to scroll to home section
   const scrollToHome = () => {
     // Try to find the container and scroll to first section
-    const container = document.querySelector('.sections-container');
+    const container = document.querySelector(".sections-container");
     if (container) {
       const firstSection = container.children[0];
       if (firstSection) {
-        firstSection.scrollIntoView({ behavior: 'smooth' });
+        firstSection.scrollIntoView({ behavior: "smooth" });
       }
     } else {
       // Fallback to top of page
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
 
     // Also try to trigger section change via custom event
-    window.dispatchEvent(new CustomEvent('scrollToHome'));
+    window.dispatchEvent(new CustomEvent("scrollToHome"));
   };
 
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
         {/* Logo */}
         <div
           onClick={scrollToHome}
-          className="flex items-center space-x-3 text-4xl rtl:space-x-reverse cursor-pointer transition-transform duration-300 hover:scale-105"
+          className="flex cursor-pointer items-center space-x-3 text-4xl transition-transform duration-300 hover:scale-105 rtl:space-x-reverse"
         >
           <img
             src="/simdata.png"
@@ -46,41 +47,37 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Nút mở menu mobile */}
+        {/* Nút mở menu mobile với hiệu ứng */}
         <button
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden"
+          className="relative inline-flex h-12 w-12 items-center justify-center rounded-lg p-2 text-white transition-all duration-300 xl:hidden"
         >
           <span className="sr-only">Open main menu</span>
-          <svg
-            className="h-5 w-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+          <div className="hamburger-menu">
+            <span
+              className={`hamburger-line transition-all duration-300 ${isMenuOpen ? "translate-y-1.5 rotate-45" : ""}`}
+            ></span>
+            <span
+              className={`hamburger-line transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
+            ></span>
+            <span
+              className={`hamburger-line transition-all duration-300 ${isMenuOpen ? "-translate-y-1.5 -rotate-45" : ""}`}
+            ></span>
+          </div>
         </button>
 
-        {/* Menu */}
+        {/* Menu mobile overlay */}
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto`}
+          } fixed inset-0 top-[88px] z-40 w-full bg-[#194352]/95 backdrop-blur-md transition-all duration-300 xl:static xl:inset-auto xl:top-auto xl:z-auto xl:block xl:w-auto xl:bg-transparent xl:backdrop-blur-none`}
         >
-          <ul className="mt-4 flex flex-col items-center rounded-lg p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 md:text-white rtl:space-x-reverse">
-            <li className="group relative">
+          <ul className="mt-8 flex flex-col items-start space-y-6 px-6 py-8 font-medium text-white xl:mt-0 xl:flex-row xl:space-y-0 xl:space-x-8 xl:border-0 xl:p-0 rtl:space-x-reverse">
+            <li className="group relative w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 md:bg-transparent md:p-0 md:hover:text-[#dd007f]"
+                className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:bg-transparent xl:p-0 xl:text-left xl:text-base"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 SIM
@@ -117,10 +114,10 @@ const Navbar = () => {
             </li>
 
             {/* Dropdown hover */}
-            <li className="group relative">
+            <li className="group relative w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 md:bg-transparent md:p-0 md:hover:text-[#dd007f]"
+                className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:bg-transparent xl:p-0 xl:text-left xl:text-base"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 サービス
@@ -151,10 +148,10 @@ const Navbar = () => {
               </div>
             </li>
 
-            <li className="group relative">
+            <li className="group relative w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-[#dd007f]"
+                className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:border-0 xl:p-0 xl:text-left xl:text-base xl:hover:bg-transparent"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 代理募集
@@ -172,41 +169,41 @@ const Navbar = () => {
                 </ul>
               </div>
             </li>
-            <li>
+            <li className="w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-[#dd007f]"
+                className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:border-0 xl:p-0 xl:text-left xl:text-base xl:hover:bg-transparent"
               >
                 ブログ
               </a>
             </li>
-            <li>
+            <li className="w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-[#dd007f]"
+                className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:border-0 xl:p-0 xl:text-left xl:text-base xl:hover:bg-transparent"
               >
                 会社概要
               </a>
             </li>
-            <li>
+            <li className="w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 text-2xl text-[#1d9bf0] hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
+                className="block rounded-sm px-3 py-2 text-center text-2xl text-[#1d9bf0] transition-colors duration-300 hover:text-blue-300 xl:border-0 xl:p-0 xl:text-left xl:hover:bg-transparent"
               >
                 <FaFacebook />
               </a>
             </li>
-            <li>
+            <li className="w-full xl:w-auto">
               <a
                 href="#"
-                className="block rounded-sm px-3 py-2 text-2xl text-[#1d9bf0] hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
+                className="block rounded-sm px-3 py-2 text-center text-2xl text-[#1d9bf0] transition-colors duration-300 hover:text-blue-300 xl:border-0 xl:p-0 xl:text-left xl:hover:bg-transparent"
               >
                 <FaTwitter />
               </a>
             </li>
-            <li className="group relative">
+            <li className="group relative xl:w-auto">
               <button
-                className="flex flex-row items-center gap-1 rounded-2xl border px-3 py-2 md:bg-transparent md:py-0.5"
+                className="flex w-full flex-row items-center justify-center gap-1 rounded-3xl border px-4 py-2 transition-colors duration-300 hover:bg-white/10 xl:w-auto xl:bg-transparent xl:py-0.5"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 <GrLanguage />
