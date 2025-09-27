@@ -70,11 +70,14 @@ const Navbar = () => {
         {/* Menu mobile overlay */}
         <div
           className={`${
-            isMenuOpen ? "block" : "hidden"
-          } fixed inset-0 top-[88px] z-40 w-full bg-[#194352]/95 backdrop-blur-md transition-all duration-300 xl:static xl:inset-auto xl:top-auto xl:z-auto xl:block xl:w-auto xl:bg-transparent xl:backdrop-blur-none`}
+            isMenuOpen ? "animate-slideInDown block" : "hidden"
+          } - - - fixed inset-0 top-[88px] z-40 w-full bg-[#194352]/95 backdrop-blur-md xl:static xl:inset-auto xl:top-auto xl:z-auto xl:block xl:w-auto xl:bg-transparent xl:backdrop-blur-none`}
         >
           <ul className="mt-8 flex flex-col items-start space-y-6 px-6 py-8 font-medium text-white xl:mt-0 xl:flex-row xl:space-y-0 xl:space-x-8 xl:border-0 xl:p-0 rtl:space-x-reverse">
-            <li className="group relative w-full xl:w-auto">
+            <li
+              className={`group relative w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "100ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:bg-transparent xl:p-0 xl:text-left xl:text-base"
@@ -114,7 +117,10 @@ const Navbar = () => {
             </li>
 
             {/* Dropdown hover */}
-            <li className="group relative w-full xl:w-auto">
+            <li
+              className={`group relative w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "200ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:bg-transparent xl:p-0 xl:text-left xl:text-base"
@@ -148,7 +154,10 @@ const Navbar = () => {
               </div>
             </li>
 
-            <li className="group relative w-full xl:w-auto">
+            <li
+              className={`group relative w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "300ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:border-0 xl:p-0 xl:text-left xl:text-base xl:hover:bg-transparent"
@@ -169,7 +178,10 @@ const Navbar = () => {
                 </ul>
               </div>
             </li>
-            <li className="w-full xl:w-auto">
+            <li
+              className={`w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "400ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:border-0 xl:p-0 xl:text-left xl:text-base xl:hover:bg-transparent"
@@ -177,7 +189,10 @@ const Navbar = () => {
                 ブログ
               </a>
             </li>
-            <li className="w-full xl:w-auto">
+            <li
+              className={`w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "500ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-lg transition-colors duration-300 hover:text-[#dd007f] xl:border-0 xl:p-0 xl:text-left xl:text-base xl:hover:bg-transparent"
@@ -185,7 +200,10 @@ const Navbar = () => {
                 会社概要
               </a>
             </li>
-            <li className="w-full xl:w-auto">
+            <li
+              className={`w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "600ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-center text-2xl text-[#1d9bf0] transition-colors duration-300 hover:text-blue-300 xl:border-0 xl:p-0 xl:text-left xl:hover:bg-transparent"
@@ -193,7 +211,10 @@ const Navbar = () => {
                 <FaFacebook />
               </a>
             </li>
-            <li className="w-full xl:w-auto">
+            <li
+              className={`w-full transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "700ms" : "0ms" }}
+            >
               <a
                 href="#"
                 className="block rounded-sm px-3 py-2 text-center text-2xl text-[#1d9bf0] transition-colors duration-300 hover:text-blue-300 xl:border-0 xl:p-0 xl:text-left xl:hover:bg-transparent"
@@ -201,7 +222,10 @@ const Navbar = () => {
                 <FaTwitter />
               </a>
             </li>
-            <li className="group relative xl:w-auto">
+            <li
+              className={`group relative transition-all duration-300 xl:w-auto xl:translate-y-0 xl:opacity-100 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+              style={{ transitionDelay: isMenuOpen ? "800ms" : "0ms" }}
+            >
               <button
                 className="flex w-full flex-row items-center justify-center gap-1 rounded-3xl border px-4 py-2 transition-colors duration-300 hover:bg-white/10 xl:w-auto xl:bg-transparent xl:py-0.5"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
