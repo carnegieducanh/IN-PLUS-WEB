@@ -223,31 +223,35 @@ const NavigationDots = ({
   const isCurrentSectionWhite = shouldUseWhiteStyle(activeSection);
 
   return (
-    <ul
-      className={`nav-dots ${isCurrentSectionWhite ? "nav-dots-white" : ""}`}
-      ref={navDotsRef}
-    >
-      <div className="nav-line"></div>
-      <div
-        className={`nav-active-indicator ${isCurrentSectionWhite ? "nav-active-indicator-white" : ""}`}
-        style={{ top: `${indicatorTop}px` }}
-      ></div>
-      {sections.map((s, idx) => (
-        <li
-          key={idx}
-          className={`${activeSection === idx ? "active" : ""} ${isCurrentSectionWhite && activeSection === idx ? "active-white" : ""}`}
-          onClick={() => scrollToSection(idx)}
-        >
-          <span
-            className={
-              isCurrentSectionWhite && activeSection === idx ? "text-white" : ""
-            }
+    <div className="hidden lg:block">
+      <ul
+        className={`nav-dots ${isCurrentSectionWhite ? "nav-dots-white" : ""}`}
+        ref={navDotsRef}
+      >
+        <div className="nav-line"></div>
+        <div
+          className={`nav-active-indicator ${isCurrentSectionWhite ? "nav-active-indicator-white" : ""}`}
+          style={{ top: `${indicatorTop}px` }}
+        ></div>
+        {sections.map((s, idx) => (
+          <li
+            key={idx}
+            className={`${activeSection === idx ? "active" : ""} ${isCurrentSectionWhite && activeSection === idx ? "active-white" : ""}`}
+            onClick={() => scrollToSection(idx)}
           >
-            {s}
-          </span>
-        </li>
-      ))}
-    </ul>
+            <span
+              className={
+                isCurrentSectionWhite && activeSection === idx
+                  ? "text-white"
+                  : ""
+              }
+            >
+              {s}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
