@@ -6,7 +6,6 @@ const CompanyInfo = () => {
     {
       label: "会社名",
       value: "イン・プラス株式会社",
-      valueEn: "Inplus Inc.",
     },
     {
       label: "設立",
@@ -40,7 +39,7 @@ const CompanyInfo = () => {
       className="section overlay flex min-h-screen items-center justify-center"
       id="section11"
     >
-      <div className="flex h-full w-full items-center justify-center pt-15">
+      <div className="flex h-full w-full items-center justify-center py-15">
         <div className="animate-on-scroll mx-auto h-full w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-full flex-col items-center justify-center gap-4 sm:gap-6 lg:grid lg:grid-cols-2 lg:gap-8">
             {/* Left Side - Company Data Table */}
@@ -71,11 +70,6 @@ const CompanyInfo = () => {
                                 <div className="leading-relaxed">
                                   {item.value}
                                 </div>
-                                {item.valueEn && (
-                                  <div className="mt-1 text-sm text-gray-600 sm:text-base">
-                                    {item.valueEn}
-                                  </div>
-                                )}
                               </div>
                             )}
                           </td>
