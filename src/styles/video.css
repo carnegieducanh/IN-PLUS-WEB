@@ -39,5 +39,5 @@
 .bg-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* cover thay vì fill để không méo video */
+  object-fit: fill; /* cover thay vì fill để không méo video */
 }

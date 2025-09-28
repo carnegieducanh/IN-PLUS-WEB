@@ -2,7 +2,7 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section className="" id="section1">
-      <div className="fixed top-[88px] left-0 h-1/3 w-full xl:h-[calc(100vh-88px)]">
+      <div className="fixed top-[89px] left-0 h-1/3 w-full xl:h-[calc(100vh-88px)]">
         <video
           autoPlay
           loop
