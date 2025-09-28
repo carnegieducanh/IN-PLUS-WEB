@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   /* lớp phủ bán trong suốt */
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
 
   /* thêm đầy đủ prefix */
   -webkit-backdrop-filter: blur(5px);
