@@ -1,11 +1,10 @@
-/* Video background container styles */
 .video-container {
   position: fixed;
   top: 88px;
   left: 0;
   width: 100%;
   height: calc(100vh - 88px);
-  z-index: -2;
+  z-index: -2; /* giữ video dưới cùng */
   overflow: hidden;
 }
 
@@ -16,39 +15,29 @@
   left: 0;
   width: 100%;
   height: 100%;
+  /* lớp phủ bán trong suốt */
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+
+  /* thêm đầy đủ prefix */
   -webkit-backdrop-filter: blur(5px);
-  -moz-backdrop-filter: blur(5px);
-  -ms-backdrop-filter: blur(5px);
-  -o-backdrop-filter: blur(5px);
-  filter: blur(0.5px);
+  backdrop-filter: blur(5px);
+
+  /* bỏ filter: blur(0.5px); vì gây mờ cả overlay */
   z-index: 1;
   pointer-events: none;
 }
 
-/* Fallback for browsers that don't support backdrop-filter */
-@supports not (backdrop-filter: blur(5px)) {
+/* fallback */
+@supports not (
+  (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))
+) {
   .video-container::after {
     background: rgba(255, 255, 255, 0.8);
-    filter: blur(2px);
-  }
-
-  .video-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: blur(5px);
-    z-index: 0;
   }
 }
 
 .bg-video {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover; /* cover thay vì fill để không méo video */
 }
