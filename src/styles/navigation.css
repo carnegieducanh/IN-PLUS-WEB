@@ -2,9 +2,17 @@
 .hamburger-menu {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 24px;
-  height: 18px;
+  gap: 3px;
+  width: 18px;
+  height: 14px;
+}
+
+@media (min-width: 640px) {
+  .hamburger-menu {
+    gap: 4px;
+    width: 24px;
+    height: 18px;
+  }
 }
 
 .hamburger-line {

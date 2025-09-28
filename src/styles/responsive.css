@@ -69,6 +69,9 @@
   .nav-dots li.active span {
     display: none;
   }
+  .overlay {
+    padding-top: 0;
+  }
 }
 
 /* Very small screens - 360px and below */

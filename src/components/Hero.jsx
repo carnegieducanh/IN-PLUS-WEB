@@ -2,7 +2,7 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section className="" id="section1">
-      <div className="fixed top-[89px] left-0 h-1/3 w-full xl:h-[calc(100vh-88px)]">
+      <div className="fixed top-[45px] left-0 h-1/3 w-full xl:top-[89px] xl:h-[calc(100vh-88px)]">
         <video
           autoPlay
           loop
@@ -17,7 +17,7 @@ const Hero = () => {
         </video>
       </div>
       {/* Mobile/Tablet content overlay - only show on small screens */}
-      <div className="fixed top-[calc(110px+30vh)] left-0 z-10 h-[70vh] w-full xl:hidden">
+      <div className="fixed top-82 left-0 z-10 h-[70vh] w-full xl:hidden">
         {/* Content section - overlays on the lower 2/3 */}
         <div className="h-full w-full overflow-y-auto bg-white">
           <div className="h-full p-4 pb-8">
