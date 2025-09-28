@@ -19,8 +19,32 @@
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  -o-backdrop-filter: blur(5px);
+  filter: blur(0.5px);
   z-index: 1;
   pointer-events: none;
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(5px)) {
+  .video-container::after {
+    background: rgba(255, 255, 255, 0.8);
+    filter: blur(2px);
+  }
+
+  .video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+    z-index: 0;
+  }
 }
 
 .bg-video {
