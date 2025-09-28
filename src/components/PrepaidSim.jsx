@@ -34,16 +34,16 @@ const PrepaidSim = () => {
 
           {/* Right Side - Text Content */}
           <div className="order-1 w-full text-left lg:order-2 lg:w-1/2">
-            <div className="mb-2 text-4xl font-bold text-pink-600 opacity-80 sm:mb-3 sm:text-5xl md:mb-4 md:text-6xl lg:text-7xl">
+            <div className="mb-2 text-5xl font-bold text-pink-600 opacity-80 sm:mb-3 sm:text-6xl md:mb-4 md:text-7xl lg:text-8xl">
               02
             </div>
-            <h2 className="mb-4 text-xl leading-tight font-bold text-gray-800 sm:mb-5 sm:text-2xl md:mb-6 md:text-3xl lg:text-4xl">
+            <h2 className="mb-4 text-2xl leading-tight font-bold text-gray-800 sm:mb-5 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
               INPLUS PREPAID SIM
             </h2>
-            <p className="mb-4 text-base font-semibold text-pink-600 sm:mb-5 sm:text-lg md:mb-6 md:text-xl">
+            <p className="mb-4 text-lg font-semibold text-pink-600 sm:mb-5 sm:text-xl md:mb-6 md:text-2xl">
               快適な通信で、快適な日本の旅を
             </p>
-            <p className="mb-6 text-sm leading-relaxed text-gray-600 sm:mb-7 sm:text-base md:mb-8 md:text-lg">
+            <p className="mb-6 text-base leading-relaxed text-gray-600 sm:mb-7 sm:text-lg md:mb-8 md:text-xl">
               国内唯一の「MNO(純正)回線」を使用。
               大手コンビニ、空港内などで展開中。
             </p>

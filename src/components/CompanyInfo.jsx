@@ -23,11 +23,7 @@ const CompanyInfo = () => {
 
     {
       label: "FAX",
-      value: [
-        "050-3588-4208",
-        "※お電話での受付はしておりません。",
-        "※担当またはお問合せフォームよりご連絡下さいませ。",
-      ],
+      value: ["050-3588-4208", "※お電話での受付はしておりません。"],
     },
     {
       label: "事業内容",
@@ -58,10 +54,10 @@ const CompanyInfo = () => {
                           key={index}
                           className="border-b-2 border-gray-200 last:border-b-0"
                         >
-                          <td className="w-1/3 border-r-2 border-gray-300 bg-gray-100 px-3 py-3 text-sm font-medium text-gray-700 sm:px-4 sm:py-4 sm:text-base">
+                          <td className="w-1/3 border-r-2 border-gray-300 bg-gray-100 px-3 py-3 text-base font-medium text-gray-700 sm:px-4 sm:py-4 sm:text-lg">
                             {item.label}
                           </td>
-                          <td className="bg-white px-3 py-3 text-sm text-gray-800 sm:px-4 sm:py-4 sm:text-base">
+                          <td className="bg-white px-3 py-3 text-base text-gray-800 sm:px-4 sm:py-4 sm:text-lg">
                             {Array.isArray(item.value) ? (
                               <ul className="space-y-1">
                                 {item.value.map((business, idx) => (
@@ -76,7 +72,7 @@ const CompanyInfo = () => {
                                   {item.value}
                                 </div>
                                 {item.valueEn && (
-                                  <div className="mt-1 text-xs text-gray-600 sm:text-sm">
+                                  <div className="mt-1 text-sm text-gray-600 sm:text-base">
                                     {item.valueEn}
                                   </div>
                                 )}
@@ -93,11 +89,11 @@ const CompanyInfo = () => {
 
             {/* Right Side - Company Information Title & Description */}
             <div className="flex flex-col items-start justify-center gap-3 text-left sm:gap-4">
-              <h2 className="text-lg font-bold text-pink-600 sm:text-xl md:text-2xl lg:text-3xl">
+              <h2 className="text-xl font-bold text-pink-600 sm:text-2xl md:text-3xl lg:text-4xl">
                 COMPANY INFORMATION
               </h2>
               <div className="max-w-lg space-y-3 sm:space-y-4">
-                <p className="text-xs leading-relaxed text-gray-700 sm:text-sm md:text-base">
+                <p className="text-sm leading-relaxed text-gray-700 sm:text-base md:text-lg">
                   インプラスの会社概要、企業理念、
                   メッセージ、採用情報を掲載しています。
                   資料請求・お問い合わせはフォームよりお気軽にお送りください。

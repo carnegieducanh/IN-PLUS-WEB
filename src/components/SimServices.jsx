@@ -35,7 +35,7 @@ const SimServices = () => {
                 alt="JAPAN&GLOBAL UNLIMITED"
                 className="mb-4 h-48 w-full rounded-2xl object-fill shadow-xl"
               />
-              <h3 className="text-lg font-bold text-gray-800">
+              <h3 className="text-xl font-bold text-gray-800">
                 JAPAN&GLOBAL UNLIMITED
               </h3>
             </div>
@@ -45,7 +45,7 @@ const SimServices = () => {
                 alt="JAPAN&GLOBAL SIM"
                 className="mb-4 h-48 w-full rounded-2xl object-fill shadow-xl"
               />
-              <h3 className="text-lg font-bold text-gray-800">
+              <h3 className="text-xl font-bold text-gray-800">
                 JAPAN&GLOBAL SIM
               </h3>
             </div>
@@ -55,7 +55,7 @@ const SimServices = () => {
                 alt="JAPAN&GLOBAL eSIM"
                 className="mb-4 h-48 w-full rounded-2xl object-fill shadow-xl"
               />
-              <h3 className="text-lg font-bold text-gray-800">
+              <h3 className="text-xl font-bold text-gray-800">
                 JAPAN&GLOBAL eSIM
               </h3>
             </div>

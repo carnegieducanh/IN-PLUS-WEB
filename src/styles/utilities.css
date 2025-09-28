@@ -33,6 +33,20 @@
   background: linear-gradient(to right, #2563eb, #1d4ed8);
 }
 
+/* Mobile Hero overlay scroll fixes */
+.hero-mobile-overlay {
+  touch-action: pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  overscroll-behavior: contain;
+}
+
+.hero-mobile-content {
+  overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
 /* Utility classes for better text overflow handling */
 .line-clamp-3 {
   display: -webkit-box;
