@@ -4,7 +4,8 @@
       "WebFetch(domain:www.pegatroncorp.com)",
       "WebFetch(domain:www.in-plus.co.jp)",
       "Bash(mkdir:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(lsof:*)"
     ],
     "deny": [],
     "ask": []

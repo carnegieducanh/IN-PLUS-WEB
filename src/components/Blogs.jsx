@@ -68,9 +68,9 @@ const Blogs = () => {
           </div>
 
           {/* Right Side - Blogs Content with Scrollbar */}
-          <div className="flex h-[200px] w-full flex-col items-center justify-center lg:h-1/3 xl:h-[300px]">
+          <div className="flex h-[200px] w-full flex-col items-center justify-center lg:h-1/3 2xl:h-[350px]">
             <div
-              className="scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-500 h-full w-full overflow-y-scroll rounded-lg border border-white/20 shadow-lg bg-white/80 backdrop-blur-sm"
+              className="scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-500 h-full w-full overflow-y-scroll rounded-lg border border-white/20 bg-white/80 shadow-lg backdrop-blur-sm"
               style={{
                 scrollbarWidth: "thin",
                 scrollbarColor: "#9CA3AF #F3F4F6",
@@ -79,17 +79,17 @@ const Blogs = () => {
                 e.stopPropagation();
               }}
             >
-              <table className="w-full">
+              <table className="w-full border-collapse">
                 <tbody>
                   {blogs.map((item, index) => (
                     <tr
                       key={index}
-                      className="group cursor-pointer border-b border-gray-100/60 hover:bg-white/60 transition-all duration-200"
+                      className="border-b-2 border-gray-200 last:border-b-0"
                     >
                       <td className="p-1.5 sm:p-2 md:p-3">
                         <div className="flex items-start space-x-2 sm:space-x-3">
                           <div className="min-w-0 flex-shrink-0">
-                            <span className="block font-mono text-xs text-gray-600 font-medium">
+                            <span className="block font-mono text-xs font-medium text-gray-600">
                               {item.date}
                             </span>
                           </div>

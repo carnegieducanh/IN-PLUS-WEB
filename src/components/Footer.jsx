@@ -61,7 +61,7 @@ const Footer = () => {
 
   return (
     <section className="overlay" id="section11">
-      <div className="w-full pt-0 xl:pt-10">
+      <div className="w-screen pt-0 xl:pt-10">
         {/* Map Section */}
         <div className="h-[32vh] xl:h-[45vh]">
           <iframe
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Section */}
-        <div className="bg-[#194352] py-8 sm:py-12 md:py-16">
+        <div className="h-screen bg-[#194352] py-8 sm:py-12 md:py-16">
           <div className="animate-on-scroll mx-auto max-w-7xl px-4 sm:px-6 md:px-8 xl:max-w-none xl:px-12 2xl:px-20">
             {/* Mobile & Small Screen Layout (< xl) - Accordion Style */}
             <div className="xl:hidden">
@@ -299,11 +299,11 @@ const Footer = () => {
                   </li>
                 </ul>
                 {/* Company Logo for Desktop */}
-                <div className="hidden text-center xl:block">
+                <div className="hidden xl:block">
                   <img
                     src="https://www.in-plus.co.jp/wp-content/uploads/logo.png"
                     alt="Inplus Inc."
-                    className="mx-auto h-16 w-auto brightness-0 invert filter"
+                    className="h-16 w-auto brightness-0 invert filter"
                   />
                 </div>
               </div>

@@ -8,7 +8,6 @@ const NavigationDots = ({
 }) => {
   const navDotsRef = useRef(null);
   const [indicatorTop, setIndicatorTop] = useState(0);
-  const isScrolling = useRef(false);
   const isAnimatingSwap = useRef(false);
   const prevSectionRef = useRef(0);
 
