@@ -12,16 +12,16 @@ const Button = ({
   // Base styles
   const baseStyles = "cursor-pointer rounded-full border-none font-semibold tracking-wider text-white uppercase transition-all duration-300 hover:-translate-y-1 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0";
 
-  // Variant styles
+  // Variant styles with multiple fallback layers
   const variants = {
-    primary: "bg-gradient-to-r from-pink-600 to-pink-800 hover:shadow-xl hover:shadow-pink-500/40",
-    secondary: "bg-gradient-to-r from-gray-600 to-gray-800 hover:shadow-xl hover:shadow-gray-500/40",
-    success: "bg-gradient-to-r from-green-600 to-green-800 hover:shadow-xl hover:shadow-green-500/40",
-    danger: "bg-gradient-to-r from-red-600 to-red-800 hover:shadow-xl hover:shadow-red-500/40",
-    warning: "bg-gradient-to-r from-yellow-600 to-yellow-800 hover:shadow-xl hover:shadow-yellow-500/40",
-    info: "bg-gradient-to-r from-blue-600 to-blue-800 hover:shadow-xl hover:shadow-blue-500/40",
-    unlimited: "bg-gradient-to-r from-orange-600 to-red-600 hover:shadow-xl hover:shadow-orange-500/40",
-    esim: "bg-gradient-to-r from-purple-600 to-blue-600 hover:shadow-xl hover:shadow-purple-500/40",
+    primary: "bg-pink-600 bg-gradient-to-r from-pink-600 to-pink-800 btn-primary-gradient hover:shadow-xl hover:shadow-pink-500/40",
+    secondary: "bg-gray-600 bg-gradient-to-r from-gray-600 to-gray-800 btn-secondary-gradient hover:shadow-xl hover:shadow-gray-500/40",
+    success: "bg-green-600 bg-gradient-to-r from-green-600 to-green-800 btn-success-gradient hover:shadow-xl hover:shadow-green-500/40",
+    danger: "bg-red-600 bg-gradient-to-r from-red-600 to-red-800 btn-danger-gradient hover:shadow-xl hover:shadow-red-500/40",
+    warning: "bg-yellow-600 bg-gradient-to-r from-yellow-600 to-yellow-800 btn-warning-gradient hover:shadow-xl hover:shadow-yellow-500/40",
+    info: "bg-blue-600 bg-gradient-to-r from-blue-600 to-blue-800 btn-info-gradient hover:shadow-xl hover:shadow-blue-500/40",
+    unlimited: "bg-orange-600 bg-gradient-to-r from-orange-600 to-red-600 btn-unlimited-gradient hover:shadow-xl hover:shadow-orange-500/40",
+    esim: "bg-purple-600 bg-gradient-to-r from-purple-600 to-blue-600 btn-esim-gradient hover:shadow-xl hover:shadow-purple-500/40",
   };
 
   // Size styles
