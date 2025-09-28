@@ -60,8 +60,8 @@ const Footer = () => {
   };
 
   return (
-    <section className="overlay" id="section11">
-      <div className="w-screen pt-0 xl:pt-10">
+    <section className="" id="section11">
+      <div className="w-full xl:pt-12">
         {/* Map Section */}
         <div className="h-[32vh] xl:h-[45vh]">
           <iframe
@@ -78,11 +78,11 @@ const Footer = () => {
 
         {/* Footer Section */}
         <div className="h-screen bg-[#194352] py-8 sm:py-12 md:py-16">
-          <div className="animate-on-scroll mx-auto max-w-7xl px-4 sm:px-6 md:px-8 xl:max-w-none xl:px-12 2xl:px-20">
+          <div className="animate-on-scroll mx-auto w-full px-4 sm:px-6 md:px-8 xl:max-w-none xl:px-12 2xl:px-20">
             {/* Mobile & Small Screen Layout (< xl) - Accordion Style */}
             <div className="xl:hidden">
               {/* Company Logo */}
-              <div className="mb-8 hidden text-center">
+              <div className="mb-8 hidden">
                 <img
                   src="https://www.in-plus.co.jp/wp-content/uploads/logo.png"
                   alt="Inplus Inc."
@@ -441,7 +441,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Footer */}
-            <div className="mt-8 border-t border-gray-700 pt-6 xl:mt-12 xl:pt-8">
+            <div className="mt-8 pt-6 xl:mt-0 xl:border-t xl:border-gray-700 2xl:mt-8 2xl:pt-6">
               <div className="text-center">
                 <p className="text-xs text-gray-400 sm:text-sm">
                   Copyright © INPLUS Inc. All Right Reserved.
