@@ -61,7 +61,7 @@ const Footer = () => {
 
   return (
     <section className="" id="section11">
-      <div className="w-full xl:pt-12">
+      <div className="w-full pt-12">
         {/* Map Section */}
         <div className="h-[32vh] xl:h-[45vh]">
           <iframe

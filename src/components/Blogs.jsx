@@ -61,7 +61,7 @@ const Blogs = () => {
             <h2 className="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl lg:text-3xl">
               BLOGS
             </h2>
-            <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed sm:text-sm md:text-base">
+            <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-pink-600 sm:text-sm md:text-base">
               インプラスの商品についてBlogで取り上げられた実績をピックアップしてご紹介します。
               Blogでの掲載を希望される場合、お問い合わせフォームよりお送りください。
             </p>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Messenger = () => {
   return (
-    <section className="section overlay" id="section7">
+    <section className="section" id="section7">
       {" "}
       {/* Top Section - Main Message with Background */}
       <div className="relative flex min-h-screen min-w-screen items-center justify-center overflow-hidden">

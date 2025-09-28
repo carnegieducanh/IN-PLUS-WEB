@@ -58,7 +58,7 @@ const Media = () => {
             <h2 className="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl lg:text-3xl">
               MEDIA / NEWS
             </h2>
-            <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed sm:text-sm md:text-base">
+            <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-pink-600 sm:text-sm md:text-base">
               インプラスに関するプレスリリースやニュース、紹介記事をピックアップしてご紹介します。
               取材・掲載のお問い合わせ、ご相談はお問い合わせフォームよりお送りください。
             </p>

@@ -44,7 +44,7 @@ const CompanyInfo = () => {
       className="section overlay flex min-h-screen items-center justify-center"
       id="section11"
     >
-      <div className="flex h-full w-full items-center justify-center pt-0 xl:pt-15">
+      <div className="flex h-full w-full items-center justify-center pt-15">
         <div className="animate-on-scroll mx-auto h-full w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-full flex-col items-center justify-center gap-4 sm:gap-6 lg:grid lg:grid-cols-2 lg:gap-8">
             {/* Left Side - Company Data Table */}
@@ -102,7 +102,11 @@ const CompanyInfo = () => {
                   メッセージ、採用情報を掲載しています。
                   資料請求・お問い合わせはフォームよりお気軽にお送りください。
                 </p>
-                <Button variant="primary" size="medium">
+                <Button
+                  variant="primary"
+                  size="medium"
+                  className="hidden xl:block"
+                >
                   詳細ページ
                 </Button>
               </div>

@@ -2,7 +2,7 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section className="" id="section1">
-      <div className="fixed top-[45px] left-0 h-1/3 w-full xl:top-[89px] xl:h-[calc(100vh-88px)]">
+      <div className="fixed top-[48px] left-0 h-1/3 w-full sm:top-[58px] xl:top-[89px] xl:h-[calc(100vh-88px)]">
         <video
           autoPlay
           loop
@@ -17,12 +17,12 @@ const Hero = () => {
         </video>
       </div>
       {/* Mobile/Tablet content overlay - only show on small screens */}
-      <div className="fixed top-82 left-0 z-10 h-[70vh] w-full xl:hidden">
+      <div className="fixed top-[calc(48px+33.33vh)] left-0 z-10 h-[calc(100vh-48px-33.33vh)] w-full sm:top-[calc(58px+33.33vh)] sm:h-[calc(100vh-58px-33.33vh)] xl:hidden">
         {/* Content section - overlays on the lower 2/3 */}
         <div className="h-full w-full overflow-y-auto bg-white">
-          <div className="h-full p-4 pb-8">
+          <div className="h-full p-4 pt-0 pb-8">
             {/* Three product images - smaller size */}
-            <div className="mb-4 grid grid-cols-3 gap-2">
+            <div className="mb-4 grid grid-cols-3 gap-2 pt-2">
               <div className="text-center">
                 <img
                   src="https://www.in-plus.co.jp/wp-content/uploads/1-13.png"
