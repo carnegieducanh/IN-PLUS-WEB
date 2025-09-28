@@ -1,18 +1,29 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, lazy, Suspense } from "react";
 import "../style.css";
 import BannerVid from "../components/BannerVid";
 import NavigationDots from "../components/NavigationDots";
-import Hero from "../components/Hero";
-import SimServices from "../components/SimServices";
-import PrepaidSim from "../components/PrepaidSim";
-import WiFiSection from "../components/WiFiSection";
-import MultilingualWeb from "../components/MultilingualWeb";
-import SystemMarketingSection from "../components/SystemMarketing";
-import CompanyInfo from "../components/CompanyInfo";
-import Footer from "../components/Footer";
-import Messenger from "../components/Messenger";
-import News from "../components/News";
-import AboutUs from "../components/AboutUs";
+
+// Lazy load components for better performance
+const Hero = lazy(() => import("../components/Hero"));
+const SimServices = lazy(() => import("../components/SimServices"));
+const PrepaidSim = lazy(() => import("../components/PrepaidSim"));
+const WiFiSection = lazy(() => import("../components/WiFiSection"));
+const MultilingualWeb = lazy(() => import("../components/MultilingualWeb"));
+const SystemMarketingSection = lazy(() => import("../components/SystemMarketing"));
+const CompanyInfo = lazy(() => import("../components/CompanyInfo"));
+const Footer = lazy(() => import("../components/Footer"));
+const Messenger = lazy(() => import("../components/Messenger"));
+const News = lazy(() => import("../components/News"));
+const AboutUs = lazy(() => import("../components/AboutUs"));
+
+// Loading component for Suspense fallback
+const SectionLoader = () => (
+  <div className="section-loader flex items-center justify-center h-full">
+    <div className="animate-pulse text-blue-500">
+      <div className="w-8 h-8 border-4 border-blue-200 border-t-blue-500 rounded-full animate-spin"></div>
+    </div>
+  </div>
+);
 
 const sections = [
   "ホーム",
@@ -220,17 +231,17 @@ const HomePage = () => {
       {/* Sections */}
       <div className="fullpage-container sections-container" ref={containerRef}>
         {[
-          <Hero />,
-          <SimServices />,
-          <PrepaidSim />,
-          <WiFiSection />,
-          <MultilingualWeb />,
-          <SystemMarketingSection />,
-          <Messenger />,
-          <News />,
-          <AboutUs />,
-          <CompanyInfo />,
-          <Footer />,
+          <Suspense key="hero" fallback={<SectionLoader />}><Hero /></Suspense>,
+          <Suspense key="sim" fallback={<SectionLoader />}><SimServices /></Suspense>,
+          <Suspense key="prepaid" fallback={<SectionLoader />}><PrepaidSim /></Suspense>,
+          <Suspense key="wifi" fallback={<SectionLoader />}><WiFiSection /></Suspense>,
+          <Suspense key="multilingual" fallback={<SectionLoader />}><MultilingualWeb /></Suspense>,
+          <Suspense key="marketing" fallback={<SectionLoader />}><SystemMarketingSection /></Suspense>,
+          <Suspense key="messenger" fallback={<SectionLoader />}><Messenger /></Suspense>,
+          <Suspense key="news" fallback={<SectionLoader />}><News /></Suspense>,
+          <Suspense key="about" fallback={<SectionLoader />}><AboutUs /></Suspense>,
+          <Suspense key="company" fallback={<SectionLoader />}><CompanyInfo /></Suspense>,
+          <Suspense key="footer" fallback={<SectionLoader />}><Footer /></Suspense>,
         ].map((Component, index) => {
           let className = "section-wrapper";
 

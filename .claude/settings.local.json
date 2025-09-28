@@ -5,7 +5,8 @@
       "WebFetch(domain:www.in-plus.co.jp)",
       "Bash(mkdir:*)",
       "Bash(npm run build:*)",
-      "Bash(lsof:*)"
+      "Bash(lsof:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
