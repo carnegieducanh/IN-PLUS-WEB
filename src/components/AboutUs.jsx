@@ -31,7 +31,7 @@ const AboutUs = () => {
           <div className="flex items-center justify-center">
             <div className="relative">
               <img
-                src="/public/ABOUT US.avif"
+                src="./public/ABOUT US.avif"
                 alt="About Us Visual"
                 className="h-64 w-48 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 sm:h-80 sm:w-60 md:h-96 md:w-72 lg:h-[28rem] lg:w-80 xl:h-[32rem] xl:w-96"
               />

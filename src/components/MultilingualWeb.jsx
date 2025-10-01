@@ -15,7 +15,7 @@ const MultilingualWeb = () => {
               {/* First Image - Background (Larger) */}
               <div className="relative z-10">
                 <img
-                  src="/public/多言語WEB-01.webp"
+                  src="./public/多言語WEB-01.webp"
                   alt="PREPAID SIM Card Package"
                   className="h-64 w-48 -rotate-3 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:rotate-1 sm:h-80 sm:w-60 md:h-96 md:w-72 lg:h-[28rem] lg:w-80 xl:h-[32rem] xl:w-96"
                 />
@@ -24,7 +24,7 @@ const MultilingualWeb = () => {
               {/* Second Image - Foreground (Smaller, Overlapped) */}
               <div className="absolute right-2 bottom-4 z-20 md:right-4 md:bottom-6">
                 <img
-                  src="/public/多言語WEB-02.jpg"
+                  src="./public/多言語WEB-02.jpg"
                   alt="SIM Card Usage"
                   className="h-40 w-28 rotate-6 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:rotate-3 sm:h-48 sm:w-36 md:h-56 md:w-40 lg:h-64 lg:w-48 xl:h-72 xl:w-52"
                 />

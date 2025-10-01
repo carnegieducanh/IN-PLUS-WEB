@@ -34,7 +34,7 @@ const SystemMarketingSection = () => {
           <div className="flex items-center justify-center">
             <div className="relative">
               <img
-                src="/public/System開発・marketing.png"
+                src="./public/System開発・marketing.png"
                 alt="system開発・marketing事業"
                 className="h-64 w-48 -rotate-3 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:rotate-1 sm:h-80 sm:w-60 md:h-96 md:w-72 lg:h-[28rem] lg:w-80 xl:h-[32rem] xl:w-96"
               />
