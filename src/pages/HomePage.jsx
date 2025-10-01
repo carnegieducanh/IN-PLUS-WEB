@@ -4,7 +4,7 @@ import BannerVid from "../components/BannerVid";
 import NavigationDots from "../components/NavigationDots";
 
 // Lazy load components for better performance
-const Hero = lazy(() => import("../components/Hero"));
+// const Hero = lazy(() => import("../components/Hero"));
 const SimServices = lazy(() => import("../components/SimServices"));
 const PrepaidSim = lazy(() => import("../components/PrepaidSim"));
 const WiFiSection = lazy(() => import("../components/WiFiSection"));
@@ -28,7 +28,7 @@ const SectionLoader = () => (
 );
 
 const sections = [
-  "ホーム",
+  // "ホーム",
   "SIM・eSIM",
   "PREPAID SIM",
   "365plusWiFi",
@@ -233,12 +233,7 @@ const HomePage = () => {
       {/* Sections */}
       <div className="fullpage-container sections-container" ref={containerRef}>
         {[
-          <Suspense key="hero" fallback={<SectionLoader />}>
-            <Hero />
-          </Suspense>,
-          <Suspense key="sim" fallback={<SectionLoader />}>
-            <SimServices />
-          </Suspense>,
+          <SimServices />,
           <Suspense key="prepaid" fallback={<SectionLoader />}>
             <PrepaidSim />
           </Suspense>,
