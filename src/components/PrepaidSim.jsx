@@ -15,7 +15,7 @@ const PrepaidSim = () => {
               {/* First Image - Background (Larger) */}
               <div className="relative z-10">
                 <img
-                  src="https://www.in-plus.co.jp/wp-content/uploads/2-2-min.png"
+                  src="/public/PREPAID SIM-02.png"
                   alt="PREPAID SIM Card Package"
                   className="h-64 w-48 -rotate-3 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:rotate-1 sm:h-80 sm:w-60 md:h-96 md:w-72 lg:h-[28rem] lg:w-80 xl:h-[32rem] xl:w-96"
                 />
@@ -24,7 +24,7 @@ const PrepaidSim = () => {
               {/* Second Image - Foreground (Smaller, Overlapped) */}
               <div className="absolute right-2 bottom-4 z-20 md:right-4 md:bottom-6">
                 <img
-                  src="https://www.in-plus.co.jp/wp-content/uploads/inplus-top-image-4-5-min.png"
+                  src="/public/PREPAID SIM-01.jpg"
                   alt="SIM Card Usage"
                   className="h-40 w-28 rotate-6 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:rotate-3 sm:h-48 sm:w-36 md:h-56 md:w-40 lg:h-64 lg:w-48 xl:h-72 xl:w-52"
                 />

@@ -11,7 +11,7 @@ const Messenger = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(79,79,79,0.6), rgba(79,79,79,0.6)), url('https://www.in-plus.co.jp/wp-content/uploads/travel-japan-inplus.jpg')",
+              "linear-gradient(rgba(79,79,79,0.6), rgba(79,79,79,0.6)), url('https://assets.st-note.com/production/uploads/images/65791757/rectangle_large_type_2_5df075c639127740bb13d9f27f9b3c4c.jpg?width=1200')",
           }}
         ></div>
 

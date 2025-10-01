@@ -31,7 +31,7 @@ const SimServices = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3 2xl:mb-16 2xl:gap-12">
             <div className="cursor-pointer text-center transition-transform duration-300 hover:-translate-y-2">
               <img
-                src="https://www.in-plus.co.jp/wp-content/uploads/1-13.png"
+                src="/public/GLOBAL SIM-01.jpg"
                 alt="JAPAN&GLOBAL UNLIMITED"
                 className="mb-4 h-48 w-full rounded-2xl object-fill shadow-xl"
               />
@@ -41,7 +41,7 @@ const SimServices = () => {
             </div>
             <div className="cursor-pointer text-center transition-transform duration-300 hover:-translate-y-2">
               <img
-                src="https://www.in-plus.co.jp/wp-content/uploads/2-14.png"
+                src="/public/GLOBAL SIM-02.jpg"
                 alt="JAPAN&GLOBAL SIM"
                 className="mb-4 h-48 w-full rounded-2xl object-fill shadow-xl"
               />
@@ -51,7 +51,7 @@ const SimServices = () => {
             </div>
             <div className="cursor-pointer text-center transition-transform duration-300 hover:-translate-y-2">
               <img
-                src="https://www.in-plus.co.jp/wp-content/uploads/3banner-1.png"
+                src="/public/GLOBAL SIM-03.jpg"
                 alt="JAPAN&GLOBAL eSIM"
                 className="mb-4 h-48 w-full rounded-2xl object-fill shadow-xl"
               />
